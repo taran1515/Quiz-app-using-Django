@@ -94,11 +94,11 @@ WSGI_APPLICATION = 'quiz.wsgi.application'
 SOCIAL_AUTH_FACEBOOK_KEY = '1630945880414449'
 
 SOCIAL_AUTH_FACEBOOK_SECRET = '08a3acf8a89f8ad0b70e03ef6e4fb476'
-SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] # add this
-SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       # add this
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link'] 
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {       
   'fields': 'id, name, email, picture.type(large), link'
 }
-SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [                 # add this
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [                 
     ('name', 'name'),
     ('email', 'email'),
     ('picture', 'picture'),
