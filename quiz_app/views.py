@@ -11,10 +11,16 @@ def login(request):
 @login_required
 def home(request):
   choice = []
-  ques = Question.objects.get(id=1)
+  ques = Question.objects.all()
+  length = len(ques)
+  que = []
+  for i in range(length):
+    que.append(ques[i])
+
 
   return render(request, 'home.html',{
-    'question':ques,
+    'question':que,
+    'length':length,
     'choice':choice
   })
 

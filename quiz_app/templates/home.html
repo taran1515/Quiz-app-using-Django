@@ -8,15 +8,17 @@
           <h4 class="text-center">Welcome {{ user.first_name }}</h4>
         </div>
 
-            <!-- Add from here -->
-        <p>{{ question }}</p>
+           
+        {% for q in question %}
+        <p>{{ q }}</p>
         <br><br>
         <ul>
-        {% for choice in question.choice_set.all %}
+        {% for choice in q.choice_set.all %}
         <input type="radio" id=choice.choice_text name="choice"  value=choice.choice_text>
         <label for=choice.choice_text>{{ choice.choice_text }}</label><br>
         {% endfor %}
         </ul>
+        {% endfor %}
         <div class="col-sm-4 mt-2 ">
             <button class="btn btn-danger">
               <a href="{% url 'submit' %}">Submit</a>
