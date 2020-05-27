@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 
 class Question(models.Model):
-    User = models.OneToOneField(User,on_delete=models.CASCADE)
     question_text = models.TextField()
 
     def __str__(self):
